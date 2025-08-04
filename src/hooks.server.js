@@ -16,7 +16,7 @@ export async function handle({ event, resolve }) {
 				}
 			});
 		}
-		let fetchAuthCheck = await fetch(import.meta.env.VITE_API_SERVER_URL + '/users', {
+		let fetchAuthCheck = await fetch('http://31.97.49.167:8000/api/users', {
 			method: 'GET',
 			headers: {
 				'Talentaku-token': token

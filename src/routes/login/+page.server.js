@@ -7,16 +7,17 @@ export const actions = {
 			const username = formData.get('username');
 			const password = formData.get('password');
 
-			const res = await fetch(import.meta.env.VITE_API_SERVER_URL + '/auth/login', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-					Accept: 'application/json'
-				},
-				body: JSON.stringify({
-					U_NAME: username,
-					U_PASSWORD: password
-				})
+
+			const form = new FormData();
+			form.append('U_NAME', username);
+			form.append('U_PASSWORD', password);
+
+			const res = await fetch('http://31.97.49.167:8000/api/auth/login', {
+  			method: 'POST',
+  			headers: {
+   			 'parent': 'true' 
+  			},
+ 			 body: form
 			});
 
 			if (!res.ok) {

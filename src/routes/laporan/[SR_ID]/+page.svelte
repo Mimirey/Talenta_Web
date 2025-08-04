@@ -2,7 +2,7 @@
   import ReportForm from '$lib/components/ReportForm.svelte';
   export let data;
 </script>
-<div class="bg-[#3CB371] text-white px-2 py-6 flex items-center gap-2 shadow-md ">
+<div class="bg-[#6e85e8] text-white px-2 py-6 flex items-center gap-2 shadow-md ">
   <a 
     href="/laporan/harian" 
     class="text-white text-2xl font-bold hover:text-gray-100 transition duration-200"

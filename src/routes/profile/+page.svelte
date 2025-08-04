@@ -6,7 +6,7 @@
     const user= data.user;
 </script>
 
-<div class="bg-[#3CB371] text-white px-6 py-6 flex items-center gap-2 shadow-md ">
+<div class="bg-[#6e85e8] text-white px-6 py-6 flex items-center gap-2 shadow-md ">
   <h1 class="text-lg font-semibold">Profil</h1>
 </div>
 

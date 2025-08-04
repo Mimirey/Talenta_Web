@@ -8,7 +8,7 @@ export async function load({ cookies, fetch }) {
 		throw redirect(302, '/login');
 	}
 
-	const res = await fetch(import.meta.env.VITE_API_SERVER_URL + '/users', {
+	const res = await fetch('http://31.97.49.167:8000/api/users', {
 		headers: {
 			'Talentaku-token': token
 		}
@@ -20,7 +20,7 @@ export async function load({ cookies, fetch }) {
 		throw redirect(302, '/login');
 	}
 
-	cookies.set('S_ID', data.PAYLOAD.S_ID.toString(), {
+	cookies.set('U_ID', data.PAYLOAD.U_ID.toString(), {
 		path: '/', 
 		});
 

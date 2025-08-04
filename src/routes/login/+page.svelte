@@ -10,16 +10,14 @@
 </script>
 
 <div class="login-page">
-  <img src="/images/logoPonpes.png" alt="logo" class="logo">
+  <img src="/images/logo.png" alt="logo" class="logo">
 
-  <h1>Al-Achsaniyyah Parent App</h1>
+  <h1>Talenta Orang Tua</h1>
   <div class="login-content">
     
     <h2>Selamat Datang</h2>
     <p>Semangat buat hari ini ya..</p>
       <LoginForm {form} enhance={enhance}/>
-    
-    
   </div>
 </div>
 

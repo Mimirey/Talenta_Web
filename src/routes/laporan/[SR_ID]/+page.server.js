@@ -12,7 +12,7 @@ export async function load({ params, fetch, cookies }) {
 	const parentId = user.id;
 	const srId = params.SR_ID;
 
-	const res = await fetch(`${import.meta.env.VITE_API_SERVER_URL}/student-report?parentId=${parentId}`, {
+	const res = await fetch(`http://31.97.49.167:8000/api/student-report?studentId=${parentId}`, {
 		headers: {
 			'Talentaku-token': token
 		}
@@ -27,7 +27,7 @@ export async function load({ params, fetch, cookies }) {
 	const data = await res.json();
 	const reports = data.PAYLOAD ?? [];
 
-	// Temukan laporan berdasarkan SR_ID
+
 	const detail = reports.find(report => report.SR_ID == srId);
 
 	if (!detail) {

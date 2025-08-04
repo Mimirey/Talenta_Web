@@ -3,17 +3,17 @@ export async function load({ cookies, fetch }) {
     const token = cookies.get('token');
 
     // Ambil pengumuman
-    const res = await fetch(import.meta.env.VITE_API_SERVER_URL + '/announcement', {
-      headers: {
-        'Talentaku-token': token
-      }
-    });
+    // const res = await fetch(import.meta.env.VITE_API_SERVER_URL + '/announcement', {
+    //   headers: {
+    //     'Talentaku-token': token
+    //   }
+    // });
 
-    const data = await res.json();
-    const announcements = data.status === 'SUCCESS' ? data.data : [];
+    // const data = await res.json();
+    // const announcements = data.status === 'SUCCESS' ? data.data : [];
 
     // Ambil user
-    const resUsers = await fetch(import.meta.env.VITE_API_SERVER_URL + '/users', {
+    const resUsers = await fetch('http://31.97.49.167:8000/api/users', {
       headers: {
         'Talentaku-token': token
       }
@@ -23,13 +23,13 @@ export async function load({ cookies, fetch }) {
     const user = userJson.PAYLOAD ?? null;
 
     return {
-      announcements,
+      // announcements,
       user
     };
   } catch (error) {
     console.error('Error saat fetch API:', error);
     return {
-      announcements: [],
+      // announcements: [],
       user: null,
       error: 'Gagal mengambil data'
     };

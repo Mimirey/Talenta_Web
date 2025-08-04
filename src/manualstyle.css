@@ -13,15 +13,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  color: #1A6520;
-  background-color: #f9f9f9;
+  color: #1a655f;
+  background-color: #f1f4fa;
   line-height: 1.5;
 }
 
 /* ========== LOGIN PAGE ========== */
 .logo {
-  width: 100%;
-  max-width: 280px;
+  max-width: 150px;
 }
 
 .login-page {
@@ -35,18 +34,28 @@ body {
   
 }
 
-.login-page h1{
-    font-size: 26px;
-}
-
 .login-content {
-  border: 3px solid #1B5E20;
+  color: black;
   padding: 2rem 1.5rem;
   border-radius: 20px;
   width: 100%;
   max-width: 400px;
   background-color: white;
+  margin-top: 2rem;
   
+}
+.login-page h1{
+  font-size: 20px;
+  color: black;
+}
+.login-content h2{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+
+}
+.login-content p{
+  margin-bottom: 2rem;
 }
 
 form {
@@ -59,7 +68,7 @@ form {
 form input {
   padding: 1rem;
   border-radius: 20px;
-  border: 1px solid #1B5E20;
+  border: 1px solid #6e85e8;
   font-size: 1rem;
   width: 100%;
 }
@@ -67,7 +76,7 @@ form input {
 form button {
   padding: 0.75rem;
   border: none;
-  background-color: #2aa334;
+  background-color: #6e85e8;
   color: white;
   font-weight: bold;
   border-radius: 30px;
@@ -76,12 +85,9 @@ form button {
   transition: background 0.3s ease;
 }
 
-form button:hover {
-  background-color: #205409;
-}
 
 /* ========== CAROUSEL ========== */
-.carousel {
+/* .carousel {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,10 +112,10 @@ form button:hover {
   align-items: center;
   transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
   width: 100%;
-}
+} */
 
 /* Fix utama untuk tampilan gambar */
-.carousel-item img {
+/* .carousel-item img {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
@@ -121,13 +127,13 @@ form button:hover {
 }
 
 /* Hover effect */
-.carousel-item img:hover {
+/* .carousel-item img:hover {
   transform: scale(1.03);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-}
+} */ */
 
 /* Overlay text di tengah gambar */
-.overlay-text {
+/* .overlay-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -147,10 +153,10 @@ form button:hover {
 .overlay-text h2 {
   margin: 0;
   font-size: 1.25rem;
-}
+} */
 
 /* Tombol prev/next */
-.carousel button {
+/* .carousel button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -174,13 +180,13 @@ form button:hover {
 
 .carousel button:last-of-type {
   right: 10px;
-}
+} */
 
 /* Optional: animation */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
+} */
 
 /* ========== BUTTON ========== */
 
@@ -291,12 +297,12 @@ nav a{
 }
 
 nav a.is-active {
-	color: #23740a; /* atau warna yang kamu suka */
+	color: #6e85e8; 
 	font-weight: bold;
-	border-bottom: 3.5px solid #67e52c;
+	border-bottom: 3.5px solid #6e85e8;
 }
 nav a.is-active svg{
-  fill: #1A6520;
+  fill: #6e85e8;
   transform: scale(1.1);
 	transition: fill 0.2s ease, transform 0.2s ease;
 }
@@ -364,7 +370,7 @@ nav a.is-active svg{
   }
 
   /* POP UP ANNOUNCEMENTS */
-  .overlay {
+  /* .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -386,4 +392,4 @@ nav a.is-active svg{
   padding: 1.5rem;
   overflow-y: auto; 
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-}
+} */

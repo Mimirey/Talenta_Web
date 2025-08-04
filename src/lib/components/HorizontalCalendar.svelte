@@ -51,14 +51,14 @@
   <div class="grid grid-cols-7 gap-1 px-4">
     {#each Array(7) as _, i}
       {@const tanggal = startOfWeek.clone().add(i, 'day')}
-      <button
-        class={`w-full h-10 flex items-center justify-center rounded-lg
-                text-sm transition-all
-                ${tanggal.isSame(selected, 'day') 
-                    ? 'bg-green-600 text-white font-semibold'
-                    : 'bg-gray-100 hover:bg-green-100 text-gray-700'}`}
-        on:click={() => pilihTanggal(tanggal)}>
-        {tanggal.date()}
+    <button
+      class={`w-full h-10 flex items-center justify-center rounded-lg text-sm transition-all
+          ${tanggal.isSame(selected, 'day') 
+            ? 'text-white font-semibold'
+            : 'bg-gray-100 hover:bg-green-100 text-gray-700'}`}
+      style={tanggal.isSame(selected, 'day') ? 'background-color: #6e85e8;' : ''}
+      on:click={() => pilihTanggal(tanggal)}>
+      {tanggal.date()}
       </button>
     {/each}
   </div>
