@@ -48,7 +48,8 @@ export const actions = {
 					}),
 					{
 						path: '/',
-						httpOnly: false
+						httpOnly: false,
+						secure: false,
 					}
 				);
 
