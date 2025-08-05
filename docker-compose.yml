@@ -1,0 +1,17 @@
+services:
+  webtalenta:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webtalenta
+    working_dir: /app
+    ports:
+      - '3001:3000'
+    command: sh -c "node --env-file=.env build/index.js"
+    restart: unless-stopped
+    networks:
+      - webtalenta_network
+
+networks:
+  webtalenta_network:
+    driver: bridge
