@@ -12,7 +12,7 @@ export async function load({ params, fetch, cookies }) {
 	const parentId = user.id;
 	const srId = params.SR_ID;
 
-	const res = await fetch(`http://31.97.49.167:8000/api/student-report?studentId=${parentId}`, {
+	const res = await fetch(`http://31.97.49.167:8000/api/student-report?parentId=${parentId}`, {
 		headers: {
 			'Talentaku-token': token
 		}

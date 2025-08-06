@@ -13,7 +13,7 @@ export async function load ({cookies,fetch}){
     const user = JSON.parse(userCookie);
 	const parentId = user.id;
 
-    const res = await fetch(`http://31.97.49.167:8000/api/student-report?studentId=${parentId}`, {
+    const res = await fetch(`http://31.97.49.167:8000/api/student-report?parentId=${parentId}`, {
 			headers: {
 				'Talentaku-token': token,
 			

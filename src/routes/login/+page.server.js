@@ -1,3 +1,5 @@
+import { redirect } from '@sveltejs/kit';
+
 export const actions = {
 	default: async (event) => {
 		const { request, cookies, fetch } = event;
@@ -36,7 +38,7 @@ export const actions = {
 					httpOnly: true,
 					sameSite: 'lax',
 					secure: false,
-					maxAge: 60 * 60 * 24
+					
 				});
 
 				cookies.set(
@@ -49,7 +51,7 @@ export const actions = {
 					{
 						path: '/',
 						httpOnly: false,
-						secure: false
+						secure: false,
 
 					}
 				);
