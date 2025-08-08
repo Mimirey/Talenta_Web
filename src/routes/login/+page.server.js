@@ -9,17 +9,16 @@ export const actions = {
 			const username = formData.get('username');
 			const password = formData.get('password');
 
-
 			const form = new FormData();
 			form.append('U_NAME', username);
 			form.append('U_PASSWORD', password);
 
 			const res = await fetch('http://31.97.49.167:8000/api/auth/login', {
-  			method: 'POST',
-  			headers: {
-   			 'parent': 'true' 
-  			},
- 			 body: form
+				method: 'POST',
+				headers: {
+					parent: 'true'
+				},
+				body: form
 			});
 
 			if (!res.ok) {
@@ -29,6 +28,9 @@ export const actions = {
 			}
 
 			const data = await res.json();
+			const webProtocol = import.meta.env.VITE_WEB_PROTOCOL ?? 'http';
+			console.log('Web Protocol:', webProtocol);
+			let isSecure = webProtocol === 'https' ? true : false;
 
 			if (data.STATUS === 'SUCCESS') {
 				const user = data.PAYLOAD.USER;
@@ -37,8 +39,7 @@ export const actions = {
 					path: '/',
 					httpOnly: true,
 					sameSite: 'lax',
-					secure: false,
-					
+					secure: isSecure
 				});
 
 				cookies.set(
@@ -51,8 +52,7 @@ export const actions = {
 					{
 						path: '/',
 						httpOnly: false,
-						secure: false,
-
+						secure: isSecure
 					}
 				);
 

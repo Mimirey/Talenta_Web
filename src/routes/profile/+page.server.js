@@ -1,6 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 
-
 export async function load({ cookies, fetch }) {
 	const token = cookies.get('token');
 
@@ -21,12 +20,11 @@ export async function load({ cookies, fetch }) {
 	}
 
 	cookies.set('U_ID', data.PAYLOAD.U_ID.toString(), {
-		path: '/', 
-		});
+		path: '/',
+		secure: (import.meta.env.VITE_WEB_PROTOCOL ?? 'http') === 'https'
+	});
 
 	return {
 		user: data.PAYLOAD
 	};
 }
-
-
