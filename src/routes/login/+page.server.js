@@ -39,7 +39,8 @@ export const actions = {
 					path: '/',
 					httpOnly: true,
 					sameSite: 'lax',
-					secure: isSecure
+					secure: isSecure,
+					maxAge: 60 * 60 * 24 * 2 // 2 days
 				});
 
 				cookies.set(
@@ -52,7 +53,8 @@ export const actions = {
 					{
 						path: '/',
 						httpOnly: false,
-						secure: isSecure
+						secure: isSecure,
+						maxAge: 60 * 60 * 24 * 2 // 2 days
 					}
 				);
 

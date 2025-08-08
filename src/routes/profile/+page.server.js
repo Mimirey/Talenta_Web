@@ -21,7 +21,8 @@ export async function load({ cookies, fetch }) {
 
 	cookies.set('U_ID', data.PAYLOAD.U_ID.toString(), {
 		path: '/',
-		secure: (import.meta.env.VITE_WEB_PROTOCOL ?? 'http') === 'https'
+		secure: (import.meta.env.VITE_WEB_PROTOCOL ?? 'http') === 'https',
+		maxAge: 60 * 60 * 24 * 2 // 2 days
 	});
 
 	return {
